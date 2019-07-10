@@ -12,17 +12,17 @@ behind the package.
 <Heading>Philosophy</Heading>
 
 This package is about group recognition. It provides a generic
-framework to implement methods of group recognition, regardless of
-what computational representation is used. This means, that the code
-in this package is useful at least for permutation groups, matrix
+framework for implementing methods for group recognition, regardless of
+the computational representation that is used. At the very least, the code
+in this package is useful for permutation groups, matrix
 groups and projective groups.
 The setup is described in <Cite Key="NS06"/>. <P/>
 
-The framework allows to build composition trees and handles the builtup
-and usage of these trees in a generic way. It also contains a
-method selection (described in Chapter <Ref Chap="methsel"/>) that allows
-install recognition methods in a convenient way and that automatically
-tries to try the different available methods in a sensible order.
+The framework allows one to build composition trees, and it handles the build-up
+and usage of these trees in a generic way. It also provides a
+method selection system (described in Chapter <Ref Chap="methsel"/>) that allows
+one to install recognition methods in a convenient way, and that automatically
+tries the different available methods in a sensible order.
 </Section>
 
 <Section Label="overview">
@@ -30,12 +30,12 @@ tries to try the different available methods in a sensible order.
 
 Chapter <Ref Chap="install"/> describes the installation of this package.<P/>
 
-Chapter <Ref Chap="recognition"/> describes the generic, recursive procedure
-used for group recognition throughout this package. At the heart of this
-procedure is the definition of <Q>FindHomomorphism</Q> methods, which is also
-described in that chapter. For the choice of the right method for finding a
-homomorphism (or an isomorphism) we use another generic procedure, the
-<Q>method selection</Q> which is not to be confused with the &GAP; method
+Chapter <Ref Chap="recognition"/> describes the generic recursive procedure
+that is used throughout this package for group recognition. At the heart of this
+procedure is the definition of <Q>FindHomomorphism</Q> methods, which is
+given in the same chapter. We use another generic procedure to choose an
+appropriate method for finding a homomorphism (or an isomorphism), namely the
+<Q>method selection</Q> system. This should not be confused with &GAP;'s method
 selection.<P/>
 
 Our own method selection system is described in detail in Chapter <Ref

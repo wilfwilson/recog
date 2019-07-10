@@ -32,7 +32,7 @@ is not found by GAP. Of course, you can add this option to your GAP
 startup script.
 
 Recompiling the documentation is possible by the command `gap makedoc.g`
-in the recog directory. But this should not be necessary.
+in the recog directory, but this should not be necessary.
 
 ## Feedback and support
 

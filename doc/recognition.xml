@@ -245,7 +245,7 @@ set this to <K>false</K>. The result is either <K>fail</K> or
 <K>false</K> if the method fails or a recognition info record <C>ri</C>.
 If the method created a leaf then <C>ri</C> will be a leaf, otherwise
 it will have the attribute <Ref Attr="Homom"/> set, but no factor or
-kernel have been created or recognised yet. You can use for example
+kernel will have been created or recognised yet. You can use for example
 the methods in <Ref Var="FindHomMethodsPerm"/> or
 <Ref Var="FindHomMethodsMatrix"/> or <Ref Var="FindHomMethodsProjective"/>
 as the <A>method</A> argument.

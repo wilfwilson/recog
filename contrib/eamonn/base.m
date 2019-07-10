@@ -7,7 +7,7 @@ IsOrbitSmall := function (G, U: Limit := 10)
    O := {@ U @};
    k := 1; DIV := 1;
 
-   /* construct the orbit and stabiliser */
+   /* construct the orbit and stabilizer */
    while k le #O do
       pt := O[k];
       for i in [1..Ngens (G)] do

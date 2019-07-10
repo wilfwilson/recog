@@ -1509,7 +1509,7 @@ RECOG.IsThisSL2Natural := function(gens,f)
   # scalars are factored out "implicitly". Thus the generators we are
   # looking at may generate a group which only contains SL2 as a subgroup.
   if q <= 11 then    # this could be increased if needed
-      Info(InfoRecog,4,"SL2: Computing stabiliser chain.");
+      Info(InfoRecog,4,"SL2: Computing stabilizer chain.");
       S := StabilizerChain(Group(gens));
       Info(InfoRecog,4,"SL2: size is ",Size(S));
       return Size(S) mod (q*(q-1)*(q+1)) = 0;

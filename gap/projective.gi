@@ -111,12 +111,12 @@ SLPforElementFuncsProjective.StabilizerChainProj := function(ri,x)
 end;
 
 #! @BeginChunk StabilizerChainProj
-#! This method computes a stabiliser chain and a base and strong generating
+#! This method computes a stabilizer chain and a base and strong generating
 #! set using projective actions. This is a last resort method since for
 #! bigger examples no short orbits can be found in the natural action.
 #! The strong generators are the nice generator in this case and expressing
 #! group elements in terms of the nice generators ist just sifting along
-#! the stabiliser chain.
+#! the stabilizer chain.
 #! @EndChunk
 # TODO: merge FindHomMethodsPerm.StabilizerChainPerm and  FindHomMethodsProjective.StabilizerChainProj ?
 FindHomMethodsProjective.StabilizerChainProj := function(ri,G)

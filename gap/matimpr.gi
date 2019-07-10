@@ -168,7 +168,7 @@ end;
 
 #! @BeginChunk LowIndex
 #! This method is designed for the handling of the Aschbacher class C2
-#! (stabiliser of a decomposition of the underlying vector space), but may
+#! (stabilizer of a decomposition of the underlying vector space), but may
 #! succeed on other types of input as well. Given <A>G</A> <M> \le PGL(d,q)</M>,
 #! the output is either the permutation action of <A>G</A> on a short
 #! orbit of subspaces or <K>fail</K>. In the current setup, <Q>short orbit</Q>

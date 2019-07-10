@@ -115,16 +115,16 @@ end;
 
 #############################################################################
 ##
-#F  NkrOrbitsOfStabiliser( <alpha>, <sv>, <grp> )
+#F  NkrOrbitsOfStabilizer( <alpha>, <sv>, <grp> )
 ##
-##  The following function attempts to construct the stabiliser in <G>
+##  The following function attempts to construct the stabilizer in <G>
 ##  of a point <alpha>.
 
-RECOG.NkrOrbitsOfStabiliser := function ( alpha, sv, grp )
+RECOG.NkrOrbitsOfStabilizer := function ( alpha, sv, grp )
 
-    local  NextGeneratorStabiliser, N, gens, i, orbs;
+    local  NextGeneratorStabilizer, N, gens, i, orbs;
 
-    NextGeneratorStabiliser := function( alpha, sv, grp )
+    NextGeneratorStabilizer := function( alpha, sv, grp )
         local g;
         g := PseudoRandom( grp );
         return g * RECOG.NkrTraceSchreierTree( alpha^g, sv );
@@ -134,7 +134,7 @@ RECOG.NkrOrbitsOfStabiliser := function ( alpha, sv, grp )
 
     gens := [];
     for i in [1 .. Maximum( 4, Int(Log(N,2)/2) )] do
-        Add( gens, NextGeneratorStabiliser( alpha, sv, grp ) );
+        Add( gens, NextGeneratorStabilizer( alpha, sv, grp ) );
     od;
 
     orbs := OrbitsPerms( gens, Difference( [1..N], [alpha] ) );
@@ -384,7 +384,7 @@ RECOG.AllJellyfish := function( G )
 
     alpha := 1;  # alpha:=Random( [1..LargestMovedPoint(G)] );
     svalpha := RECOG.NkrSchreierTree( alpha, gens, gensinv );
-    alphaorbs := RECOG.NkrOrbitsOfStabiliser( alpha, svalpha, G );
+    alphaorbs := RECOG.NkrOrbitsOfStabilizer( alpha, svalpha, G );
 
     sizes := List( alphaorbs, i -> Length(i) );
     s := Minimum( sizes );

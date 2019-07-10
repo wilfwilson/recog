@@ -360,7 +360,7 @@ LowIndexMaps := function(G,ri)
  kgens := FastNormalClosure(GeneratorsOfGroup(G),kgens,3);
 
 # Compute the stabilizer of 1 in P
- s1gens := List(GeneratorsOfGroup(Stabiliser(P,1)),x->ImageElm(rhoinv,x));
+ s1gens := List(GeneratorsOfGroup(Stabilizer(P,1)),x->ImageElm(rhoinv,x));
 
  G1 := GroupWithGenerators(Concatenation(kgens,s1gens));
 

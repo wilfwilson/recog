@@ -194,9 +194,9 @@ end;
 
 # Now to the small base groups using stabilizer chains:
 
-# The GAP manual suggests that the labels at each level of a stabiliser chain
+# The GAP manual suggests that the labels at each level of a stabilizer chain
 # are identical GAP objects, but it does not promise this.
-# This function tests whether the stabiliser chain has this property, and
+# This function tests whether the stabilizer chain has this property, and
 # gives an error if not.
 DoSafetyCheckStabChain := function(S)
   while IsBound(S.stabilizer) do
@@ -208,7 +208,7 @@ DoSafetyCheckStabChain := function(S)
 end;
 
 #! @BeginChunk StabChain
-#! This is the randomized &GAP; library function for computing a stabiliser
+#! This is the randomized &GAP; library function for computing a stabilizer
 #! chain. The method selection process ensures that this function is called
 #! only with small-base inputs, where the method works efficiently.
 #! @EndChunk
@@ -381,7 +381,7 @@ FindHomMethodsPerm.ThrowAwayFixedPoints :=
   end;
 
 #! @BeginChunk Pcgs
-#! This is the &GAP; library function to compute a stabiliser chain for a
+#! This is the &GAP; library function to compute a stabilizer chain for a
 #! solvable permutation group. If the method is successful then the calling
 #! node becomes a leaf node in the recursive scheme. If the input group is
 #! not solvable then the method returns <K>NeverApplicable</K>.

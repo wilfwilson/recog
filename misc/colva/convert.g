@@ -53,7 +53,7 @@ end procedure;
 
 
 sub_lengths:= function(g)
-  orbits:= Orbits(Stabiliser(g, 1));
+  orbits:= Orbits(Stabilizer(g, 1));
   assert #orbits[1] eq 1;
   Exclude(~orbits, orbits[1]);
   lengths:= [#x : x in orbits];

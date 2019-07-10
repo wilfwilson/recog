@@ -581,7 +581,7 @@ InstallMethod( FindElmOfEvenNormalSubgroup, "for a group object and a record",
                               msg := "No central involutions found" );
               fi;
               invgrp := GroupWithGenerators(invols);
-              Info(InfoFindEvenNormal,3,"Computing stabiliser chain...");
+              Info(InfoFindEvenNormal,3,"Computing stabilizer chain...");
               S := StabilizerChain(invgrp,
                          rec( Projective := opt.Projective,
                               IsOne := opt.IsOne,

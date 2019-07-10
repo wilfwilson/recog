@@ -8,10 +8,13 @@ This chapter covers the recursive, generic recognition procedure.
 <Heading>Group recognition</Heading>
 
 This chapter describes a generic framework for group recognition.
-The basic problem is, we want to solve the constructive membership
-problem: given any
-<M>g \in G</M>, <M>G = \langle X \rangle</M>, write a straight line
-program (SLP) from <M>X</M> to <M>g</M>, for <M>g \notin G</M> (in the
+The basic problem that we want to solve is the constructive membership
+problem:
+provide an algorithm that,
+given a group <M>G = \langle X \rangle</M>,
+then for <M>g \in G</M> write a straight line
+program (SLP) from <M>X</M> to <M>g</M>,
+and for any <M>g \notin G</M> (in the
 situation that <M>G</M> is naturally embedded into some bigger group),
 the algorithm should fail. This is usually done by constructing
 some nice generators (and then writing an SLP from the nice generators
@@ -266,24 +269,36 @@ passed to <Ref Attr="Homom"/>.
 <Section Label="rirecord">
     <Heading>Recognition info records</Heading>
 
-A recognition info record is a &GAP; component object. It is a member
-of the family
+A <E>recognition info record</E> is... <!-- TODO -->
+Technically, it is a &GAP; attribute-storing component object, i.e. it lies in
+  the representations
+<Ref Filt="IsAttributeStoringRep" BookName="Ref"/>
+and
+<Ref Filt="IsComponentObjectRep" BookName="Ref"/>.
+
+This means that we can define attributes for it, the values of which are stored
+once they are known. A recognition info record always represents a whole
+binary tree of such records, see the attributes <Ref Attr="RIFac"/> and <Ref
+Attr="RIKer"/> below. <P/>
+
+Every recognition info record is a member of the family <Ref
+Fam="RecognitionInfoFamily"/>, and lies in the category <Ref
+Filt="IsRecognitionInfo"/>. <P/>
 
 <ManSection>
 <Fam Name="RecognitionInfoFamily"/>
+<Description>
+    The family of every recognition info record is <C>RecognitionInfoFamily</C>.
+</Description>
 </ManSection>
-
-and is in the category
 
 <ManSection>
-    <Filt Name="IsRecognitionInfo" Type="Category"/>
+<Filt Name="IsRecognitionInfo" Type="Category"/>
+<Description>
+    Every recognition info record belongs to the category
+    <C>IsRecognitionInfo</C>.
+</Description>
 </ManSection>
-
-and is <Ref Filt="IsAttributeStoringRep" BookName="Ref"/>, such that we can
-define attributes for it, the values of which are stored once they are
-known. A recognition info record always represents a whole binary tree of such
-records, see the attributes <Ref Attr="RIFac"/> and <Ref Attr="RIKer"/>
-below. <P/>
 
 The following filters are defined for recognition info records:
 

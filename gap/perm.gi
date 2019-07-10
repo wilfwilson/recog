@@ -56,11 +56,11 @@ FindHomMethodsPerm.NonTransitive :=
 
 #! @BeginChunk Imprimitive
 #! If the input group is not known to be transitive then this method
-#! returns <K>NotEnoughInformation</K>. If the input group is known to be transitive
-#! and primitive then the method returns <K>NeverApplicable</K>; otherwise, the method
-#! tries to compute a nontrivial block system. If successful then a
-#! homomorphism to the action on the blocks is defined; otherwise,
-#! the method returns <K>NeverApplicable</K>.
+#! returns <K>NotEnoughInformation</K>. If the input group is known to be
+#! transitive and primitive then the method returns <K>NeverApplicable</K>;
+#! otherwise, the method tries to compute a nontrivial block system. If
+#! successful, then a homomorphism to the action on the blocks is defined;
+#! otherwise, the method returns <K>NeverApplicable</K>.
 #! 
 #! If the method is successful then it also gives a hint for the children of
 #! the node by determining whether the kernel of the action on the
@@ -346,8 +346,8 @@ end;
 #! points is at most <M>1/3</M> of the largest moved point of <A>G</A>,
 #! or  <M>k</M> is at most half of the number of points on which
 #! <A>G</A> is stored internally by &GAP;. The method returns
-#! <K>NeverApplicable</K> if it does not define a homomorphism indicating that it will
-#! never succeed.
+#! <K>NeverApplicable</K> if it does not define a homomorphism, indicating that
+#! it will never succeed.
 #! @EndChunk
 FindHomMethodsPerm.ThrowAwayFixedPoints :=
   function( ri, G )

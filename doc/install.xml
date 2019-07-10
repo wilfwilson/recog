@@ -23,8 +23,9 @@ and
 <Package>orb</Package>
 packages to work.
 
-Recompiling the documentation is possible by the command <C>gap makedoc.g</C>
-in the <F>recog</F> directory. But this should not be necessary.
+Recompiling the documentation is possible by running the command
+<C>gap makedoc.g</C>
+in the <F>recog</F> directory, but this should not be necessary.
 
 <!-- ############################################################ -->
 
